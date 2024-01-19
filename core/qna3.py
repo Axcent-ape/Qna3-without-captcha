@@ -101,9 +101,7 @@ class Qna3:
         return self.web3_utils.send_data_tx(to=to, from_=from_, data=data, gas_price=gas_price, gas_limit=gas_limit, chain_id=chain_id)
 
     async def send_claim_hash(self, hash):
-        token = self.recaptcha
         params = {
-            'recaptcha': token,
             'hash': hash,
             'via': 'opbnb'
         }
